@@ -1,0 +1,50 @@
+<!-- motion_scene_home.xml -->
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
+        motion:duration="1000">
+
+        <OnSwipe
+            motion:touchAnchorId="@+id/recyclerView"
+            motion:touchAnchorSide="top"
+            motion:dragDirection="dragUp" />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:framePosition="0"
+                motion:motionTarget="@+id/muscleImageView"
+                android:visibility="gone" />
+            <KeyAttribute
+                motion:framePosition="100"
+                motion:motionTarget="@+id/muscleImageView"
+                android:visibility="visible" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/muscleImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/muscleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+    </ConstraintSet>
+
+</MotionScene>

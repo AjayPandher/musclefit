@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "773251017733",
+    "project_id": "musclefit-1",
+    "storage_bucket": "musclefit-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773251017733:android:eb741a7f38f1ef52a9406c",
+        "android_client_info": {
+          "package_name": "com.musclefit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvQB8yUj-z4_Pfa7zGzt7eHgXJvCbU-oI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

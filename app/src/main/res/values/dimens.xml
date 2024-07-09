@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_dob_width">100dp</dimen>
+    <dimen name="item_dob_height">50dp</dimen>
+    <dimen name="pageMargin">16dp</dimen>
+    <dimen name="offset">16dp</dimen>
+    <dimen name="viewpager_next_item_visible">40dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">0dp</dimen>
+
+</resources>

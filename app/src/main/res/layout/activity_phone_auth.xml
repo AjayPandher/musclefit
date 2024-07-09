@@ -1,0 +1,116 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneAuthActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="100dp"/>
+
+            <LinearLayout
+                android:id="@+id/phoneInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/logoImageView"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePicker"
+                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_weight="1"
+
+                    android:layout_below="@+id/logoImageView"
+                    app:ccp_showFlag="true"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_countryPreference="US,CA"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true" />
+
+
+                <EditText
+                    android:id="@+id/phoneNumberEditText"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/sendCodeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneInputLayout"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Send Verification Code" />
+
+            <EditText
+                android:id="@+id/verificationCodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sendCodeButton"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="Verification Code"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/verifyCodeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verificationCodeEditText"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Verify Code"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/errorMessageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verifyCodeButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textColor="#FF0000"
+                android:text="Error Message"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/skipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/errorMessageTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Skip for now" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
